@@ -1,0 +1,28 @@
+{"navbarmenu":[
+	{
+		"name" : "About Me",
+		"address" : "./abt"
+	},
+	{
+		"name" : "Project",
+		"address" : "./pro"
+	},
+	{
+		"name" : "Qualification",
+		"address" : "./qual"
+	},
+	{
+		"name" : "Media",
+		"address" : "./mypic"
+	},
+	{
+		"name" : "Contact Me",
+		"address" : "./co"
+	},
+	{
+		"name" :"Hobbies",
+		"address" : "./hob"
+	}
+]
+
+}

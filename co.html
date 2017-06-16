@@ -1,57 +1,63 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <title>Shyam Solomon</title>
-</head>
-<body>
-<b>
-<div class="container-fluid">
-  <b>
-  <nav class="navbar navbar-default">
-       <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="shome.html"><span class="glyphicon glyphicon-home"></span> Home <span class="sr-only">(current)</span></a>
-    </div>
+<div class="container">
+<div class="row-fluid">
 
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
-        <li><a href="abt.html"><span class="glyphicon glyphicon-user"></span> About Me </a></li>
-        <li><a href="qual.html"><span class="glyphicon glyphicon-tags"></span> Qualification </a></li>
-        <li><a href="pro.html"><span class="glyphicon glyphicon-tags"></span> Project </a></li>
-        <li><a href="mypic.html"><span class="glyphicon glyphicon-picture"></span> Media</a></li>
-        <li class="active"><a href="co.html"><span class="glyphicon glyphicon-comment"></span> Contact Me</a></li>
-      </ul>
-      </div>
-      </b>
-      </nav>    
-     </div><!-- /.navbar-collapse -->
-    
-    <div class="container-fluid">
-<h4>Home</h4>
+<div class="col-md-4">
+  <b><h1>Home</h1></b>
   <div class="well">
   S2 Jayam Yamunalakshmi Homes<br>
   No 7, Venkatesan Street<br>
   New Perungalathur<br>
- Chennai-600 063
- </div>
+  Chennai-600 063
+    </div>
+  </span>
   <div class="well">Phone No:+91 8608112290<br>
- Mail Id:shyamsolomon94@gmail.com
+   Mail Id:shyamsolomon94@gmail.com
+ </div>
+ </div>
+ <div class="col-md-8">
+  <style>
+      #map {
+        height: 320px;
+        width: 100%;
+       }
+    </style>
+        <h3>My Location</h3>
+    <div id="map"></div>
+    <script>
+      function initMap() {
+        var uluru = {lat: 12.910414, lng: 80.094539};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 15,
+          center: uluru
+        });
+        var marker = new google.maps.Marker({
+          position: uluru,
+          map: map
+        });
+      }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAMKVZSlKUEV-fYxT95nBENSYMQbkKqGYw&callback=initMap">
+    </script>
 </div>
-<script src='https://maps.googleapis.com/maps/api/js?v=3.exp'></script><div style='overflow:hidden;height:440px;width:700px;'>
-<div id='gmap_canvas' style='height:440px;width:700px;'></div><div><small><a href="http://embedgooglemaps.com">Click here to generate your map!</a></small></div><div><small><a href="http://promocode.com.ph/zalora/">Click here to save up to 70% off from your favorite products</a></small></div><style>#gmap_canvas img{max-width:none!important;background:none!important}</style></div><script type='text/javascript'>function init_map(){var myOptions = {zoom:16,center:new google.maps.LatLng(12.910536206726647,80.09459479842108),mapTypeId: google.maps.MapTypeId.ROADMAP};map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(12.910536206726647,80.09459479842108)});infowindow = new google.maps.InfoWindow({content:'<strong><b>Home</b></strong><br>Perungalathur<br>Chennai'});google.maps.event.addListener(marker, 'click', function(){infowindow.open(map,marker);});infowindow.open(map,marker);}google.maps.event.addDomListener(window, 'load', init_map);</script>
+</div>
+<div ng-app="capp">
+<div class="col-md-4">
+<br>
+ <div ng-controller="myCtrl2">
+<button ng-click="myFunc()" class="btn btn-info">Click Here! to submit your contact</button>
+
+<div ng-show="showMe">
+<div ng-controller="myCtrl">
+         <label>Enter the Name :</label><br>
+        <input type="text" ng-model="user.fname" placeholder="Enter name"><br>
+        <label>Enter the Email-ID :</label><br>
+        <input type="text" ng-model="user.email" placeholder="Enter email"><br>
+        <button ng-click="myFunction(user)" value="submit">Submit</button>
+    </div>
+     </div>
+</div>
+
 </div>
 </div>
-</b>
-</body>
-</html>
+</div>
